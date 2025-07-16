@@ -1,9 +1,7 @@
 Controle de Estoque
-
 Sistema simples de linha de comando em Python para gerenciar produtos usando MySQL.
 
 Como usar
-
 Crie um banco de dados no MySQL (pode usar o XAMPP).
 
 No arquivo .env, preencha as variáveis com os dados do seu banco:
@@ -20,14 +18,38 @@ Execute o script estoque_mercado.py.
 
 Siga o menu interativo:
 
+diff
+Copiar
+Editar
 === MENU PRINCIPAL ===
 1 - Consultar produto por ID
 2 - Listar TODOS os produtos
 3 - Cadastrar novo produto
 4 - Sair
+Arquivo .env
+Crie um arquivo chamado .env na raiz do projeto com o seguinte formato:
+
+env
+Copiar
+Editar
+DB_HOST=localhost
+DB_USER=seu_usuario
+DB_PASSWORD=sua_senha
+DB_NAME=nome_do_banco
+DB_PORT=3306
+Explicação:
+
+DB_HOST: Endereço do servidor do banco de dados (ex: localhost se estiver local)
+
+DB_USER: Usuário do MySQL (ex: root)
+
+DB_PASSWORD: Senha do usuário MySQL (pode ser vazia se não tiver senha)
+
+DB_NAME: Nome do banco de dados que você criou para o projeto
+
+DB_PORT: Porta do MySQL (padrão é 3306)
 
 Requisitos
-
 Python 3.9 ou superior
 
 MySQL em execução
@@ -36,14 +58,17 @@ Biblioteca mysql-connector-python
 
 Instale a dependência com:
 
+bash
+Copiar
+Editar
 pip install mysql-connector-python
-
 Estrutura sugerida
-
+bash
+Copiar
+Editar
 controle-estoque/
 ├── estoque_mercado.py
 ├── .env
 ├── .env.example
 └── README.md
-
 Projeto simples para fins de aprendizado.
